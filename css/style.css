@@ -24,8 +24,8 @@ h1 {
 
 /* The typing effect */
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100 }
+  from { width: 0em }
+  to { width: 15em }
 }
 
 /* The typewriter cursor effect */
@@ -35,13 +35,6 @@ h1 {
 }
 
 
-/* Grid CSS */
-
-
-
-
-/* Navigation CSS */
-/* CHECK OUT THIS CODE BELOW IF YOU WANT TO GET A REFRESHER ON FLEX */
 #navBar {
   display: flex;
   flex-direction: row;
@@ -49,7 +42,7 @@ h1 {
 }
 #navBar h1 {
   padding-top: 10px;
-  width: 25%;
+  width: 15em;
   font-weight: bold;
 }
 #navigation {
@@ -57,7 +50,6 @@ h1 {
   width: 50%;
   align-items: center;
   justify-content: space-evenly;
-  
 }
 #navigation p, a {
   cursor: pointer;
@@ -73,7 +65,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 300px;
+  gap: 20%;
   margin-top: 5%;
 }
 
@@ -104,25 +96,7 @@ img {
   color: #3b3b3b; 
 }
 
-/*.img-container{
-  display: flex;
-}
 
-.about p{
-  max-width: 350px;
-  font-size: 16px;
-  font-weight: 300;
-  margin: auto;
-  color: #3b3b3b; 
-}
-
-.me{
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 300px;
-  margin-left:auto;
-}*/
 h2 {
   font-size: 50px;
   margin: 0px 0px;
@@ -164,7 +138,7 @@ footer{
   grid-template-areas:
   "coaching coaching"
   "webApp game1"
-  "placeHolder placeHolder";
+  "placeHolder1 placeHolder2";
   grid-gap: 20px;
 }
 
@@ -192,7 +166,13 @@ footer{
 }
 
 #placeholder{
-  grid-area: placeHolder;
+  grid-area: placeHolder1;
+  background-image: url("../images/image.png");
+  box-shadow: 10px 10px 30px 2px #000000d0;
+  transition: transform .2s; /* Animation */
+}
+#placeholder{
+  grid-area: placeHolder2;
   background-image: url("../images/image.png");
   box-shadow: 10px 10px 30px 2px #000000d0;
   transition: transform .2s; /* Animation */
@@ -232,10 +212,7 @@ h2{
   padding: 40px;
 }
 
-#about p{
-  position: flex;
-  text-align: center;
-}
+
 
 #contact{
   justify-content: center;
