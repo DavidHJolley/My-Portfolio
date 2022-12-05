@@ -136,6 +136,7 @@ footer{
   margin-top: 110px;
 }
 
+/* Define the layout and styles for the project grid */
 #catagoryGrid{
   margin: 0px 5%;
   display:grid;
