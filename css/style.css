@@ -1,0 +1,226 @@
+*{
+  background-color:#bbbbbb00;
+}
+
+html, body{
+  background-image: linear-gradient(to right top, #7d277d, #b12367, #cf3f49, #d66a27, #c79600);
+  min-height:100%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0em }
+  to { width: 15em }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+#navBar {
+  display: flex;
+  flex-direction: row;
+  margin: 4px 5%;
+}
+#navBar h1 {
+  padding-top: 10px;
+  width: 15em;
+  font-weight: bold;
+}
+#navigation {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#navigation p, a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+.highlight {
+  color: #a03592;
+  font-weight: 700;
+}
+
+/* Contains hero img and text */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+  margin-top: 5%;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 25px;
+}
+
+.image {
+  flex-basis: 20%;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  padding: 5px;
+  padding-bottom: 2px;
+  min-width: 300px;
+}
+
+.text {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.container p{
+  max-width: 350px;
+  font-size: 16px;
+  font-weight: 300;
+  margin: auto;
+  color: #3b3b3b; 
+}
+
+
+h2 {
+  font-size: 50px;
+  margin: 0px 0px;
+  color: #000000;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: 300;
+  margin: 0px 0px;
+  font-weight: bold;
+}
+
+h4 {
+  color: white;
+  font-weight: 400;
+  font-size: 22px;
+}
+
+footer{
+  min-height: 200px;
+}
+
+.subHeading{
+  text-align: center;
+  border-bottom: 2px solid black;
+  width: 300px;
+  margin: 50px auto;
+  margin-top: 110px;
+}
+
+#catagoryGrid{
+  margin: 0px 5%;
+  display:grid;
+  min-height: 1000px;
+  height: 70vh;
+  grid-template-rows: 1fr, 1fr;
+  grid-template-columns: 1fr, 1fr, 1fr;
+  grid-template-areas:
+  "coaching coaching"
+  "webApp game1"
+  "placeHolder1 placeHolder2";
+  grid-gap: 20px;
+}
+
+.catagoryGridArea:hover{
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  box-shadow: 7px 15px 10px rgb(0 0 0 / 0.15);
+}
+
+.catagoryGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 5px;
+  cursor: pointer;
+  display: grid;
+  align-content: end;
+  border-radius: 10px;
+}
+
+#game1{
+  grid-area: game1;
+  background-image: url("../images/game.gif");
+  box-shadow: 10px 10px 30px 2px #000000d0;
+  transition: transform .2s; /* Animation */
+}
+
+#placeholder{
+  grid-area: placeHolder1;
+  background-image: url("../images/image.png");
+  box-shadow: 10px 10px 30px 2px #000000d0;
+  transition: transform .2s; /* Animation */
+}
+#placeholder{
+  grid-area: placeHolder2;
+  background-image: url("../images/image.png");
+  box-shadow: 10px 10px 30px 2px #000000d0;
+  transition: transform .2s; /* Animation */
+}
+
+#coaching{
+  grid-area: coaching;
+  background-image: url("../images/coaching.gif");
+  box-shadow: 10px 10px 30px 2px #000000d0;
+  transition: transform .2s; /* Animation */
+}
+
+#webApp{
+  grid-area: webApp;
+  background-image: url("../images/website.PNG");
+  box-shadow: 10px 10px 30px 2px #000000d0;
+  transition: transform .2s; /* Animation */
+}
+
+.heading{
+  background-color: rgba(0,0,0,0.7);
+  padding: 15px;
+  height: 25px;
+  color: white;
+  font-size: 18px;
+  border-bottom: 4px solid #FF6200;
+}
+
+h2{
+  color:rgb(45, 23, 51);    
+  font-size: 60px;
+}
+
+#about{
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+
+
+#contact{
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+
+#discord p{
+  text-align:center;
+}
