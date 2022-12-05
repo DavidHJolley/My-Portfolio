@@ -2,6 +2,13 @@
   background-color:#bbbbbb00;
 }
 
+@media only screen and (max-width: 600px) {
+  .text {
+    font-size: 24px;
+    padding-left: 20px;
+  }
+}
+
 html, body{
   background-image: linear-gradient(to right top, #7d277d, #b12367, #cf3f49, #d66a27, #c79600);
   min-height:100%;
