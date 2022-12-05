@@ -61,6 +61,7 @@ h1 {
   font-weight: 700;
 }
 
+/* Contains hero img and text */
 .container {
   display: flex;
   align-items: center;
