@@ -2,6 +2,10 @@
   background-color:#bbbbbb00;
 }
 
+* :not(#catagoryGrid){
+  overflow-x: hidden;
+}
+
 @media only screen and (max-width: 600px){
   h2{
     color:rgb(45, 23, 51);    
@@ -53,7 +57,7 @@ h1 {
 #navBar {
   display: flex;
   flex-direction: row;
-  margin: 4px 5%;
+  margin: 0px 5%;
 }
 #navBar h1 {
   padding-top: 10px;
@@ -144,8 +148,8 @@ footer{
   text-align: center;
   border-bottom: 2px solid black;
   width: 300px;
-  margin: 50px auto;
-  margin-top: 110px;
+  margin: 5% auto;
+  margin-top: 115px;
 }
 
 #catagoryGrid{
