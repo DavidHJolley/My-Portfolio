@@ -2,6 +2,7 @@
   background-color:#bbbbbb00;
 }
 
+/* Fixes x overflow bug by disallowing x overflow to all except #catagoryGrid, as it breaks the shadow */
 * :not(#catagoryGrid){
   overflow-x: hidden;
 }
@@ -141,7 +142,7 @@ h4 {
 
 /* Adds a nice gap at the bottom */
 footer{
-  min-height: 200px;
+  min-height: 50px;
 }
 
 .subHeading{
@@ -181,6 +182,7 @@ footer{
   display: grid;
   align-content: end;
   border-radius: 10px;
+  margin-bottom: 70px;
 }
 
 /* --- GRID ELEMENTS --- */
