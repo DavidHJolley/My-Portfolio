@@ -1,0 +1,114 @@
+---
+import type { Project } from '../data/site';
+import Scribble from './Scribble.astro';
+
+interface Props {
+  project: Project;
+}
+const { project } = Astro.props;
+const Tag = project.href ? 'a' : 'div';
+const linkAttrs = project.href ? { href: project.href, target: '_blank', rel: 'noopener' } : {};
+---
+
+<Tag class="card reveal" {...linkAttrs}>
+  <div class="art slot">
+    {project.image ? (
+      <img src={project.image} alt="" loading="lazy" />
+    ) : (
+      <>
+        <Scribble class="card-scribble" />
+        <span class="slot-label">{project.imageLabel}</span>
+      </>
+    )}
+    <span class="tag">{project.tag}</span>
+    {project.pen && <span class="pen note">{project.pen}</span>}
+  </div>
+  <div class="meta">
+    <h3>{project.title}</h3>
+    <p>{project.blurb}</p>
+    <span class="stack">{project.stack}</span>
+  </div>
+</Tag>
+
+<style>
+  .card {
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    background: var(--paper);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    min-width: 0;
+    transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  }
+  a.card:hover,
+  a.card:focus-visible {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 40px -28px rgba(17, 17, 17, 0.35);
+  }
+  .art {
+    aspect-ratio: 3 / 2;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .art img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .art :global(.card-scribble) {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .tag {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    padding: 4px 8px;
+    background: var(--paper);
+    color: var(--ink);
+    border: 1px solid var(--line);
+  }
+  .note {
+    position: absolute;
+    right: 16px;
+    bottom: 14px;
+    font-size: 24px;
+  }
+  .meta {
+    padding: 18px;
+    display: grid;
+    gap: 6px;
+    align-content: start;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 19px;
+    letter-spacing: -0.01em;
+  }
+  p {
+    font-size: 15px;
+    color: var(--ink-2);
+  }
+  .stack {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--mute);
+    margin-top: 6px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .card {
+      transition: none;
+    }
+  }
+</style>

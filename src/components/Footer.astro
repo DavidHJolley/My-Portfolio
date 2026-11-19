@@ -1,0 +1,21 @@
+---
+import { site, footer } from '../data/site';
+const year = new Date().getFullYear();
+---
+
+<footer class="footer container">
+  <span class="wordmark">{site.name} <span class="p">( {year} )</span></span>
+  <span class="eyebrow">{footer.note}</span>
+</footer>
+
+<style>
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-block: 28px 40px;
+    border-top: 1px solid var(--line);
+  }
+</style>

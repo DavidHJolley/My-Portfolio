@@ -1,0 +1,49 @@
+---
+import { projects, earlierWork, sections } from '../data/site';
+import ProjectCard from './ProjectCard.astro';
+---
+
+<section class="section container" id="work" aria-labelledby="work-title">
+  <div class="section-head reveal">
+    <h2 id="work-title">{sections.work}</h2>
+    <span class="label">( work )</span>
+  </div>
+
+  <div class="cards">
+    {projects.map((p) => <ProjectCard project={p} />)}
+  </div>
+
+  <div class="earlier reveal">
+    <span class="eyebrow">( earlier work )</span>
+    {earlierWork.map((w) => (
+      <a href={w.href} target="_blank" rel="noopener">{w.label}</a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+  }
+  .earlier {
+    margin-top: 28px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    align-items: baseline;
+    font-size: 15px;
+  }
+  .earlier a {
+    color: var(--ink-2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+  }
+  .earlier a:hover,
+  .earlier a:focus-visible {
+    border-color: var(--ink);
+  }
+</style>

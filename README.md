@@ -1,27 +1,28 @@
-# My Portfolio
- 
-# Description
+# davidhjolley.com
 
-This is my personal portfolio website, made to allow people to view my projects and learn more about me. It follows standards for semantic HTML including comments, image alt attributes and more.
+Personal site for David Jolley, founder of Oarka. Built with [Astro](https://astro.build) and deployed to GitHub Pages at https://davidhjolley.com.
 
-## Screenshot
+## Develop
 
-![screenshot of webpage](./images/screenshot.png)
+```bash
+npm install
+npm run dev
+```
 
-## Link
+`npm run build` writes the static site to `dist/`. `npm run preview` serves that build locally.
 
-https://davidhjolley.com
+## Structure
+
+- `src/pages/index.astro` – the single page, composed from components
+- `src/components/` – Nav, Hero, Projects, ProjectCard, About, Contact, Footer, Scribble
+- `src/data/site.ts` – all copy, project list and links (currently lorem ipsum)
+- `src/styles/global.css` – design tokens and base styles
+- `public/` – static files copied as-is, including `CNAME` for the custom domain
+
+## Deploy
+
+Pushes to `main` run `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages. The repository's Pages setting must be set to "GitHub Actions" as the source.
 
 ## License
 
-### MIT 
-
-Copyright <2022> <David H Jolley>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-![badmath](https://opensource.org/files/OSIApproved_1.png) 
+MIT, see `LICENSE`.

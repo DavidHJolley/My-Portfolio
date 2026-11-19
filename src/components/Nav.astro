@@ -1,0 +1,50 @@
+---
+import { nav, site } from '../data/site';
+---
+
+<header class="nav container">
+  <a class="wordmark" href="/">{site.name} <span class="p">( {site.tagline} )</span></a>
+  <nav aria-label="Site">
+    <ul>
+      {nav.map((item) => (
+        <li><a href={item.href}>{item.label}</a></li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-block: 22px;
+    border-bottom: 1px solid var(--line);
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 22px;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+  }
+  a {
+    color: var(--ink);
+    text-decoration: none;
+  }
+  ul a:hover,
+  ul a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+  }
+  @media (max-width: 480px) {
+    .wordmark .p {
+      display: none;
+    }
+  }
+</style>
