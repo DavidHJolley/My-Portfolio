@@ -1,10 +1,11 @@
-// Content for the site. Copy is lorem ipsum until David writes the real words.
+// Content for the site. Edit this file and the whole page updates.
 
 export const site = {
   name: 'david jolley',
   tagline: 'founder, oarka',
   url: 'https://davidhjolley.com',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  description:
+    'David Jolley is the founder of Oarka. This is where he keeps the things he builds: Stow, Capy Cove and the projects that came before them.',
 };
 
 export const nav = [
@@ -16,47 +17,48 @@ export const nav = [
 // ---------- hero ----------
 // headline: one string per line. Wrap the word you want in green with *asterisks*.
 export const hero = {
-  eyebrow: '( lorem · ipsum · 2026 )',
-  headline: ['lorem ipsum', 'dolor sit *amet*,', 'consectetur.'],
+  eyebrow: '( founder · builder · 2026 )',
+  headline: ["hi, i'm david.", 'i build things', 'i wish *existed*.'],
   lede:
-    'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis.',
-  pen: 'lorem ipsum dolor sit amet',
-  primary: { label: 'lorem ipsum', href: '#work' },
-  secondary: { label: 'dolor', href: '#contact' },
+    "I've been into computers my whole life. In 2022 I signed up for a front end bootcamp, and somewhere along the way that turned into founding Oarka. I still build things for fun on the side.",
+  pen: 'still learning new things',
+  primary: { label: 'see the work', href: '#work' },
+  secondary: { label: 'say hi', href: '#contact' },
   photoAlt: 'David Jolley',
-  photoCaption: '( fig. 1 )',
+  photoCaption: '( fig. 1 · me )',
 };
 
 // ---------- section titles ----------
 export const sections = {
-  work: 'lorem ipsum',
-  about: 'lorem ipsum dolor',
-  contact: 'lorem ipsum',
+  work: "things i've made",
+  about: 'a bit about me',
+  contact: 'say hello',
 };
 
 // ---------- about ----------
 export const about = {
   paragraphs: [
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    "I've been interested in computers my entire life. In late 2022 I started a front end bootcamp to see if I could turn that into something real, and the first version of this site was one of the things I built there.",
+    "Now I'm the founder of Oarka. We make Stow: Bluetooth tags for your things and Hubs for the rooms they live in, so your phone gets a heads-up before something gets left behind. It means I work on hardware, apps and the web all in the same week, which keeps it interesting.",
+    'Away from work there is usually music on, and usually a League of Legends queue about to pop. I play competitively and take it more seriously than I should.',
   ],
-  pen: 'lorem ipsum dolor sit',
+  pen: 'gg, see you on the rift',
   photoLabel: 'photo slot\n1 : 1',
   facts: [
-    { label: 'now playing', value: 'lorem ipsum', bars: true },
-    { label: 'rank', value: 'lorem ipsum' },
-    { label: 'based in', value: 'lorem, canada' },
+    { label: 'now playing', value: 'porter robinson', bars: true },
+    { label: 'off hours', value: 'league of legends' },
+    { label: 'based in', value: 'canada' },
   ],
 };
 
 // ---------- contact ----------
 export const contact = {
-  email: 'lorem@ipsum.com',
+  email: 'DavidHJolley2000@gmail.com',
 };
 
 // ---------- footer ----------
 export const footer = {
-  note: 'lorem ipsum dolor sit amet',
+  note: 'built by david, music on',
 };
 
 export type Project = {
@@ -75,12 +77,12 @@ export const projects: Project[] = [
   {
     slug: 'stow',
     title: 'Stow by Oarka',
-    tag: 'founder · 2025–',
+    tag: 'founder · since 2025',
     blurb:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Tags for your things and Hubs for the rooms they live in. Your phone hears about it before your keys get left behind. The first kits are on pre-order now.',
     stack: 'hardware · ble · mobile · web',
     href: 'https://oarka.ca',
-    pen: 'lorem ipsum',
+    pen: 'my main thing',
     imageLabel: 'product photo',
   },
   {
@@ -88,18 +90,17 @@ export const projects: Project[] = [
     title: 'Capy Cove',
     tag: 'side project · 2026',
     blurb:
-      'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'A multiplayer hangout world in the browser. Five locations, three minigames, hats, and ambient capybara bots so it never feels empty.',
     stack: 'three.js · node · websocket',
     href: 'https://capycove.duckdns.org/',
-    pen: 'dolor sit',
+    pen: 'yes, capybaras',
     imageLabel: 'screenshot',
   },
   {
     slug: 'aihost',
     title: 'AiHost',
-    tag: 'placeholder',
-    blurb:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    tag: 'in progress · 2026',
+    blurb: 'A JavaScript project from this year. A proper write-up is on the way.',
     stack: 'javascript · 2026',
     imageLabel: 'no image yet',
   },
