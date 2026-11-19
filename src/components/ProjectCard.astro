@@ -13,7 +13,7 @@ const linkAttrs = project.href ? { href: project.href, target: '_blank', rel: 'n
 <Tag class="card reveal" {...linkAttrs}>
   <div class="art slot">
     {project.image ? (
-      <img src={project.image} alt="" loading="lazy" />
+      <img src={project.image} alt={`Screenshot of ${project.title}`} width="800" height="533" loading="lazy" />
     ) : (
       <>
         <Scribble class="card-scribble" />
@@ -21,7 +21,7 @@ const linkAttrs = project.href ? { href: project.href, target: '_blank', rel: 'n
       </>
     )}
     <span class="tag">{project.tag}</span>
-    {project.pen && <span class="pen note">{project.pen}</span>}
+    {project.pen && <span class:list={['pen', 'note', { 'on-image': project.image }]}>{project.pen}</span>}
   </div>
   <div class="meta">
     <h3>{project.title}</h3>
@@ -83,6 +83,16 @@ const linkAttrs = project.href ? { href: project.href, target: '_blank', rel: 'n
     right: 16px;
     bottom: 14px;
     font-size: 24px;
+    z-index: 1;
+  }
+  /* over a screenshot the note sits on a slip of paper so it stays readable */
+  .note.on-image {
+    padding: 3px 10px 5px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+  }
+  .tag {
+    z-index: 1;
   }
   .meta {
     padding: 18px;

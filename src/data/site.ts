@@ -83,6 +83,7 @@ export const projects: Project[] = [
     stack: 'hardware · ble · mobile · web',
     href: 'https://oarka.ca',
     pen: 'my main thing',
+    image: '/projects/stow.webp',
     imageLabel: 'product photo',
   },
   {
@@ -94,6 +95,7 @@ export const projects: Project[] = [
     stack: 'three.js · node · websocket',
     href: 'https://capycove.duckdns.org/',
     pen: 'yes, capybaras',
+    image: '/projects/capy-cove.webp',
     imageLabel: 'screenshot',
   },
   {
