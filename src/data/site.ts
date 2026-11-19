@@ -39,7 +39,7 @@ export const sections = {
 export const about = {
   paragraphs: [
     "I've been interested in computers my entire life. In late 2022 I started a front end bootcamp to see if I could turn that into something real, and the first version of this site was one of the things I built there.",
-    "Now I'm the founder of Oarka. We make Stow: Bluetooth tags for your things and Hubs for the rooms they live in, so your phone gets a heads-up before something gets left behind. It means I work on hardware, apps and the web all in the same week, which keeps it interesting.",
+    "Now I'm building Oarka, where I do the technical side: the code, the models and the product design. We make Stow, a smart sticker for the things you own. You stick one on, and Stow tells you when you need the item, what you need it for, where it is, and if it has been left somewhere for too long.",
     'Away from work there is usually music on, and usually a League of Legends queue about to pop. I play competitively and take it more seriously than I should.',
   ],
   pen: 'gg, see you on the rift',
@@ -77,9 +77,9 @@ export const projects: Project[] = [
   {
     slug: 'stow',
     title: 'Stow by Oarka',
-    tag: 'founder · since 2025',
+    tag: 'founder · since 2026',
     blurb:
-      'Tags for your things and Hubs for the rooms they live in. Your phone hears about it before your keys get left behind. The first kits are on pre-order now.',
+      'Smart stickers for your things. Stow tells you when you need an item, what you need it for, where it is, and if it has been left somewhere for too long.',
     stack: 'hardware · ble · mobile · web',
     href: 'https://oarka.ca',
     pen: 'my main thing',
